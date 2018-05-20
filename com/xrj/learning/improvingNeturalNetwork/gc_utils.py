@@ -34,7 +34,6 @@ def dictionary_to_vector(parameters):
     keys = []
     count = 0
     for key in ["W1", "b1", "W2", "b2", "W3", "b3"]:
-        
         # flatten parameter
         new_vector = np.reshape(parameters[key], (-1,1))
         keys = keys + [key]*new_vector.shape[0]
@@ -65,7 +64,6 @@ def gradients_to_vector(gradients):
     """
     Roll all our gradients dictionary into a single vector satisfying our specific required shape.
     """
-    
     count = 0
     for key in ["dW1", "db1", "dW2", "db2", "dW3", "db3"]:
         # flatten parameter
